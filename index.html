@@ -74,6 +74,48 @@
 <h6 class="title">文の一部の文字色を変える練習</h6>
 <p><span style="color: red;">赤</span>という字だけ色を変えるとき、変える部分だけをspanタグで囲む。</p>
 
+<h7 class="title">入力フォームの練習</h7>
+<p>フォームタグで囲む。一行だけのボックスはinput type="text"（囲みなし）。改行を含む複数行のボックスはtextareaタグで囲む。
+  
+入力部品をdivで囲むと縦に並ぶ。
+①フォームの名前はlabelタグで囲む。入力部品には名前と関連付けたid属性をつけ,label for="属性"としておく。
+②または、ラベルタグの中に直接入力部品を入れることで、id属性は不要になる。</p>
+
+入力部品のタグにplaceholder="入力例"を入れることで入力例を表示できる。
+
+<p>①の方法で作成</p>
+<form>
+  <div>
+    <label for="name">お名前</label>
+    <input type="text" id="name">
+  </div>
+  <div>
+    <label for="content">内容</label>
+    <textarea id="content"></textarea>
+  </div>
+</form>
+<p>②の方法で作成</p>
+<form>
+  <div>
+    <label>お名前
+      <input type="text" placeholder="例:山田太郎"></label>
+  </div>
+  <div>
+    <label>内容<textarea placeholder="例:商品が届きません。"></textarea>
+    </label>
+  </div>
+</form>
+<h8 class="title">チェックボックスの練習</h8>
+<p>labelタグの中にinput type="checkbox"を入れてチェックボックスを作る。一連のボックスをfieldsetタグで囲み、legendタグでタイトルをつけると、ボックスをセットにしてタイトルをつけることができる。</p>
+<div>
+  <fieldset>
+    <legend>対象の商品</legend>
+  <label><input type="checkbox">商品A</label>
+  <label><input type="checkbox">商品B</label>
+  <label><input type="checkbox">商品C</label>
+</fieldset>
+</div>
+
 </body>
 
 <footer>
