@@ -27,3 +27,15 @@ background-image:url("../wallpaper2.jpg");
     border-color: rgb(255, 0, 170);
     border-radius: 10px;
     margin:10px 10px 10px 10px;}
+
+ .center {
+     width: 800px;
+     height: 320px;
+     border-width: 8px;
+     border-color: blueviolet;
+     border-style: solid;
+     border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 8px;
+      text-align:center;
+    }
