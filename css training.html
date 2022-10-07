@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>html/css練習サイト</title>
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="css/styles2.css">
+</head>
+
+<body>
+  <div>
+  <h>-----CSSの練習-----</h>
+  <p>♪ボックスの作成練習♪
+    <!-- <br>htmlにはデフォルトで余白設定があるので、p要素のmargin:0;でリセットし、width,heightで幅と高さを指定する。<br>
+    webデザインでは16pxをベースにすることが多い。<br>どちらかに%をつけると、数値を指定した方に対する比率になる。<br>ブラウザのサイズ変更をしても幅は最大、最小ここまでと指定したいときはmax-width、min-widthとする。<br>枠線（境界線）の幅はborder-width:xxpx;<br>スタイルはborder-style:solid/dashed/double;など<br>色はborder-color:blue;など<br>で指定する。<br>borderのあとに-top,-right,-bottom,-leftととすると、上、左右、下のみの線を変えられる。<br>border:太さ 種類 色 で一括指定（ただし、省略しないで全て書く）できる。--></p> 
+  </div>
+  <div>
+  <p>♪ボックスの余白の設定練習♪ <!-- <br>padding-top,right,bottom,leftで枠の内側の余白を設定できる。一括指定する場合は、padding:上、左右、下 で指定する。１つの値を指定すると全ての値の指定となる。<br>margin-top,right,bottom,leftで枠の外側の余白を設定できる。padding同様一括指定もできる。左右についてはautoと指定すると、widthを引いた余白が左（右）に割り振られる。左右両方に指定すると、中央揃えとなる。--></p></div> 
+<div>
+   <p class="sizing">♪box-sizingの練習♪<!-- <br>高さ・幅を変えずに境界線をつけたい時<br>デフォルト設定ではwidthや
+  heightに境界線の幅や余白が含まれないため、その分boxが大きくなってしまう。そこで、borderやpaddingを指定したあとに、box-sizing:border-box;とすることで、最初に指定したboxの高さと幅を保つことができる。--></p> 
+  </div>
+<div>
+  <p class="overh">♪overflowによるコンテンツ制御の練習①♪<br>
+    ・あふれた部分を隠したいとき<!-- →overflow:hidden; -->
+    <br>こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！</p>
+
+    <p class="overs">♪overflowによるコンテンツ制御の練習②♪<br>
+      ・スクロール表示したいとき
+      <!-- →oberlow:scroll; -->
+      <br>こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！</p>
+</div>
+<div>
+ <p class="rad">♪ボックスの角を丸める練習♪<br>①４つの角を一度に指定する <!-- border-radius:16px";で、半径16pxの円で丸める--></p> 
+</div>
+<div>
+  <p class="rad4">♪ボックスの角を丸める練習♪<br>②４つの角のサイズをそれぞれ指定する<!-- border-radius:16px 0 16px 32px";で、左から時計回りにサイズを指定する。--></p> 
+ </div>
+ <div>
+  <p class="en">♪ボックスの角を丸める練習♪<br>③%指定を使って正円を作る<!-- border-radius:50%とする--></p> 
+ </div>
+
+ 
+
+
+
+  
+  <footer><a href="index.html">戻る</a></footer>
+
+  </body>
+  </html>

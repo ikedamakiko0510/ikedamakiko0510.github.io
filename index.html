@@ -58,8 +58,8 @@
 
 <div class="box1"><a href="#top">BOXとページ内リンクの練習(ページトップに戻る)</a></div>
 
+<h class="title">中央揃えの練習（ハロウィン画像）</h>
 <div class="center">
-  <h1>中央揃えの練習（ハロウィン画像）</h1>
 <img src="halloween2.png" width="120" height="100" alt="ハロウィンのお化け">
   <p>ハロウィンの季節です。</p>
   </div>
@@ -68,22 +68,22 @@
 <h4 class="title">br改行の練習（俳句）</h4>
 <p>古池や<br>蛙とびこむ<br>水の音</p>
 
-<h5 class="title">タグ記号を使いたいとき</h5>
-<p>文中で<code>&lt;h1&gt;</code>のようにタグを使いたいときは、文字参照（アンド記号とlt;,gt;を使う）を使い、codeタグで囲む</p>
+<h5 class="title">文中でタグ記号を使う練習</h5>
+<p>文中で<code>&lt;h1&gt;</code>のようにタグを使う<!-- 文字参照（アンド記号とlt;,gt;を使う）を使い、codeタグで囲む--></p> 
 
 <h6 class="title">文の一部の文字色を変える練習</h6>
-<p><span style="color: red;">赤</span>という字だけ色を変えるとき、変える部分だけをspanタグで囲む。</p>
+<p><span style="color: red;">赤</span>という字だけ色を変える<!-- とき、変える部分だけをspanタグで囲む。--></p> 
 
-<h7 class="title">入力フォームの練習</h7>
-<p>フォームタグで囲む。一行だけのボックスはinput type="text"（囲みなし）。改行を含む複数行のボックスはtextareaタグで囲む。
+<h7 class="title">■入力フォームの練習</h7>
+<!-- <p>フォームタグで囲む。一行だけのボックスはinput type="text"（囲みなし）。改行を含む複数行のボックスはtextareaタグで囲む。
   
 入力部品をdivで囲むと縦に並ぶ。
 ①フォームの名前はlabelタグで囲む。入力部品には名前と関連付けたid属性をつけ,label for="属性"としておく。
 ②または、ラベルタグの中に直接入力部品を入れることで、id属性は不要になる。</p>
 
-入力部品のタグにplaceholder="入力例"を入れることで入力例を表示できる。
+入力部品のタグにplaceholder="入力例"を入れることで入力例を表示できる。 -->
 
-<p>①の方法で作成</p>
+<p>-----id属性で作成-----</p>
 <form>
   <div>
     <label for="name">お名前</label>
@@ -94,7 +94,7 @@
     <textarea id="content"></textarea>
   </div>
 </form>
-<p>②の方法で作成</p>
+<p>-----labelタグに直接入力部品を入れて作成-----</p>
 <form>
   <div>
     <label>お名前
@@ -105,8 +105,8 @@
     </label>
   </div>
 </form>
-<h8 class="title">チェックボックスの練習</h8>
-<p>labelタグの中にinput type="checkbox"を入れてチェックボックスを作る。一連のボックスをfieldsetタグで囲み、legendタグでタイトルをつけると、ボックスをセットにしてタイトルをつけることができる。</p>
+<h8 class="title">■チェックボックスの練習</h8>
+<!-- <p>labelタグの中にinput type="checkbox"を入れてチェックボックスを作る。一連のボックスをfieldsetタグで囲み、legendタグでタイトルをつけると、ボックスをセットにしてタイトルをつけることができる。</p> -->
 <div>
   <fieldset>
     <legend>対象の商品</legend>
@@ -115,6 +115,102 @@
   <label><input type="checkbox">商品C</label>
 </fieldset>
 </div>
+<div>
+<h9 class="title">■ラジオボタンの練習</h9>
+  <!-- <p>labelタグの中にinput type="radio"を入れてラジオボタンを作る。
+    これに続けて同じname属性をつける（name="")と、このうちの
+    一つしか選択できなくなる。
+  </p> -->
+  <fieldset>
+    <legend>対象の商品</legend>
+  <label><input type="radio" name="warranty">加入済</label>
+  <label><input type="radio" name="warranty">未加入</label>
+  <label><input type="radio" name="warranty">わからない</label>
+</fieldset>
+</div>
+<div>
+<h10 class="title">■ドロップダウンリストとリストボックスの練習</h10>
+  <!-- <p>labelタグの中に、リストのタイトルを入れ、続けてselectタグを作成し、その中にoptionタグで選択肢を作る。selectタグに=（数字）を入れると、数字の数だけ選択肢を表示できる。リストボックスにしたい時は、selectタグにsize="数値"で、数値の個数の選択肢を表示できる。さらに、multiple属性を追加するとctrlキーでの複数選択が可能になる。
+  </p> --></div>
+<label>
+  ドロップダウン
+  <select>
+  <option>--お選び下さい--</option>
+  <option>商品が届かない</option>
+  <option>商品が壊れた</option>
+  <option>間違えて注文した</option>
+  <option>決済手段を変えたい</option>
+  <option>その他</option>
+</select></label>
+<label>
+  リストボックス
+  <select size="3" multiple>
+  <option>商品が届かない</option>
+  <option>商品が壊れた</option>
+  <option>間違えて注文した</option>
+  <option>決済手段を変えたい</option>
+  <option>その他</option>
+</select></label>
+
+<div>
+<h11 class="title">■ボタン配置の練習</h11></div>
+<!-- <p>①buttonタグでボタン名を囲むか、②input type="submit" value="ボタン名"タグ（閉じタグなし）で作成する。buttonタグは画像の挿入も可能で自由にボタン名を記述できる。 </p> -->
+<div>
+ <button>方法①</button>
+ <input type="submit" value="方法②">
+</div>
+
+<div>
+<h12 class="title">■入力部品にあらかじめ値〇〇、またはチェックしたボックスやボタンをセットしておく練習</h12>
+<!-- 入力フォームの場合→value"〇〇"属性をつける
+チェックボックス、ラジオボタンの場合→checked属性（ラジオボタンはひとつだけ）をつける
+ドロップダウンリストの場合→optionタグにselected属性をつける
+textareaの場合→タグ内に直接〇〇を入力（正し、タブも反映されるので注意） -->
+
+</div>
+
+<div>
+  <h13 class="title">■ボタン無効化の練習</h13>
+  <!-- <p>buttonタグにdisabledタグをつけて無効化できる。</p> -->
+  <div>
+  <button disabled>無効にしたボタン</button></div>
+</div>
+
+<div>
+  <h14 class="title">■text以外のものを
+入力するテキストボックス作成の練習
+  </h14>
+  <!-- <table border="1">
+    <thead>
+      <tr><th>入力するもの</th><th>属性(input type" ")</th><th>内容</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>文字</td><td>text</td><td>通常の入力</td></tr>
+      <tr><td>パスワード</td><td>password</td><td>文字を隠す入力</td></tr>
+      <tr><td>数値</td><td>number</td><td>数値（ボタンで増減）</td></tr>
+      <tr><td>日付</td><td>date</td><td>カレンダーから選べる</td></tr>
+    </tbody>
+  </table> -->
+  <p>※数値、日付はブラウザによって動作しないことがあるので注意。</p>
+
+  <div>
+  <label>お名前<input type="text"></label>
+  </div>  
+  <div>
+    <label>パスワード<input type="password"></label>
+    </div>  
+  <div>
+    <label>数量<input type="number"></label>
+  </div>  
+  <div>
+    <label>日付<input type="date"></label>
+  </div>  
+
+</div>
+
+
+<p class="css training"><a href="css training.html">
+  CSSの練習へ</a></p>
 
 </body>
 
