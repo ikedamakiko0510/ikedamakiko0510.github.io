@@ -1,8 +1,11 @@
 body{
 background-image:url("../wallpaper2.jpg");
  background-size: cover;}
-.title{
-  font-size:35px;
+
+p{font-size:20px;} 
+
+ .title{
+  font-size:30px;
   margin-bottom:10px;}
 
 .spring{color:pink;
@@ -29,13 +32,19 @@ background-image:url("../wallpaper2.jpg");
     margin:10px 10px 10px 10px;}
 
  .center {
-     width: 800px;
-     height: 320px;
+     font-size:16px;
+     width: 320px;
+     height: 160px;
      border-width: 8px;
      border-color: blueviolet;
      border-style: solid;
      border-radius: 8px;
-      padding: 16px;
+      padding: 8px;
       margin-bottom: 8px;
       text-align:center;
     }
+
+    fieldset{font-size:20px;
+        margin-bottom:16px;}
+    form{margin-bottom:16px}
+    select{margin-bottom:16px}
