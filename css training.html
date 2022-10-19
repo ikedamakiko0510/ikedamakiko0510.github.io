@@ -9,15 +9,15 @@
 
 <body>
   <div>
-  <h>-----CSSの練習-----</h>
-  <p>♪ボックスの作成練習♪
+  <h1>-----CSSの練習-----</h1>
+  <p class="box">♪ボックスの作成練習♪
     <!-- <br>htmlにはデフォルトで余白設定があるので、p要素のmargin:0;でリセットし、width,heightで幅と高さを指定する。<br>
     webデザインでは16pxをベースにすることが多い。<br>どちらかに%をつけると、数値を指定した方に対する比率になる。<br>ブラウザのサイズ変更をしても幅は最大、最小ここまでと指定したいときはmax-width、min-widthとする。<br>枠線（境界線）の幅はborder-width:xxpx;<br>スタイルはborder-style:solid/dashed/double;など<br>色はborder-color:blue;など<br>で指定する。<br>borderのあとに-top,-right,-bottom,-leftととすると、上、左右、下のみの線を変えられる。<br>border:太さ 種類 色 で一括指定（ただし、省略しないで全て書く）できる。--></p> 
   </div>
   <div>
-  <p>♪ボックスの余白の設定練習♪ <!-- <br>padding-top,right,bottom,leftで枠の内側の余白を設定できる。一括指定する場合は、padding:上、左右、下 で指定する。１つの値を指定すると全ての値の指定となる。<br>margin-top,right,bottom,leftで枠の外側の余白を設定できる。padding同様一括指定もできる。左右についてはautoと指定すると、widthを引いた余白が左（右）に割り振られる。左右両方に指定すると、中央揃えとなる。--></p></div> 
+  <p class="box">♪ボックスの余白の設定練習♪ <!-- <br>padding-top,right,bottom,leftで枠の内側の余白を設定できる。一括指定する場合は、padding:上、左右、下 で指定する。１つの値を指定すると全ての値の指定となる。<br>margin-top,right,bottom,leftで枠の外側の余白を設定できる。padding同様一括指定もできる。左右についてはautoと指定すると、widthを引いた余白が左（右）に割り振られる。左右両方に指定すると、中央揃えとなる。--></p></div> 
 <div>
-   <p class="sizing">♪box-sizingの練習♪<!-- <br>高さ・幅を変えずに境界線をつけたい時<br>デフォルト設定ではwidthや
+   <p class="sizing">♪box-sizingの練習♪<br>高さ・幅を変えずに境界線をつける。<br><!-- デフォルト設定ではwidthや
   heightに境界線の幅や余白が含まれないため、その分boxが大きくなってしまう。そこで、borderやpaddingを指定したあとに、box-sizing:border-box;とすることで、最初に指定したboxの高さと幅を保つことができる。--></p> 
   </div>
 <div>
@@ -39,13 +39,59 @@
  <div>
   <p class="en">♪ボックスの角を丸める練習♪<br>③%指定を使って正円を作る<!-- border-radius:50%とする--></p> 
  </div>
+<div>
+  <p class="shadow1">♪ボックスに影をつける練習♪<br>①右下に影をつける<br><!-- box-shadow:8px 8px 8px 色指定; とすると、１つめの値が＋で右方向、-で左方向に8px、
+  2つ目の値が＋で下方向、‐で上方向へ8pxずらす。３つめの値が大きいほどぼかしを大きくする。 -->
+  </p>
+</div>
+<div>
+  <p class="shadow2">♪ボックスに影をつける練習♪<br>②全方向に影をつける<br><!-- box-shadow:0 0 8px gray;というふうに 最初の２つを0 0とする。 -->
+  </p>
+</div>
 
- 
+<div>
+<h2>テキストのスタイリングの練習</h2>
+<p class="text">こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！</p><!-- hのテキストフォントはデフォルトで太字なので、普通に戻すにはfont-weight:normal;とする。
+  (太字は、font-weight:bold;)
+  text-align:center;で中央揃え
+  text-aligh:right;で右揃えになる。 -->
+</div>
 
+<div>
+<h3>♪line-heightで行間を制御する練習♪</h3> <p class="lh">こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！こんにちは！</p>
+<!-- 行間の設定：テキストの高さ＝font-size、その上下にある次のテキストとの間隔を、Half Leadingと呼ぶが、この高さはテキストの種類により異なるので、half leading+font-sizeをまとめて、line-heightという値を使う。例：font-sizeが16pxのとき、line-heightを24pxとすると、上下の余白は、24-16=8÷2で4pxずつになる。また、line-heightの数値は1.5などの数にすると、font-sizeの1.5倍になる。通常は、数値が推奨（フォントサイズが変更されても行間が一定になるため）
+-->
+<div>
+<h4>♪継承の仕組みの練習♪</h4><p class="inh">スタイルの継承の練習</p><!-- h1とpを同じスタイルにする→bodyにスタイルを設定する。ただし、設定が反映される（＝継承される）のは、color(文字色)、font-size、font-weight、text-alignなどで、border,padding,marginなどは継承されない。 継承されないスタイルを継承したい場合、スタイル名に:inherit;とつけると、親要素のスタイルが継承される。--></p>
+</div>
 
+<div>
+<h5>♪font-familyによるフォント指定の練習♪</h5>
+<!--font-family:で、優先するフォント順に記述する（使用するOSにより、使用できるフォントが異なるため）。空白の含まれるフォント名は、""を使用する。
+  ex)font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  --><p class="ff1">こんにちは！</p>
+  <p class="ff2">こんにちは！</p>
+  <p class="ff3">こんにちは！</p>
+  <p class="ff4">こんにちは！</p>
+  <p class="ff5">こんにちは！</p>
+</div>
 
-  
-  <footer><a href="index.html">戻る</a></footer>
+<div>
+  <section>
+  <h6>♪sectionのスタイリングの練習♪</h6><p class="sect">sectionで囲って枠をつけ、中央揃えや余白設定をする。</p></section>
+   <!-- hとpをsectionで囲ってそれにスタイルをつけていく。領域内の中央揃えはtext-align:center;、余白を領域の外につけるときはmargin（背景色の外側）、内側につけるときはpadding-->
+</div>
+
+<div>
+  <h7>♪cssの仕様を調べる練習♪</h7>
+<p class="mdn"><a href="https://developer.mozilla.org/ja/docs/Web/CSS/border">borderについてmdnで調べる</a>
+<!-- 公式定義の初期値は、一括指定で省略された時に指定される、継承についてなどを調べられる。 -->
+</p>
+</div>
+<div>
+<h8><a href="css training2.html">CSS応用編へ</a></h8>
+</div>  
+  <footer><a href="index.html">トップへ戻る</a></footer>
 
   </body>
   </html>
