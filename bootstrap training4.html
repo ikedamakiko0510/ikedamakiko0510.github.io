@@ -1,0 +1,83 @@
+<!-- リストとナビゲーション -->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Project Nyaan</title>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	<style>
+		body {
+			padding-top: 50px;
+			background-color: lightgray;
+		}
+
+		.starter-template {
+			padding: 40px 15px;
+			background-color: white;
+		}
+		.top-rt{margin:80px;}
+	</style>
+</head>
+
+<body>
+    <!--ナビゲーションバーの追加-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        		<div class="container">
+        			<div class="navbar-header">
+        				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        					<span class="sr-only">Toggle navigation</span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+        				</button>
+        				<!--ページタイトル-->
+        				<a class="navbar-brand" href="#">Project Nyaan</a>
+        			</div>
+        			<div id="navbar" class="collapse navbar-collapse">
+        				<ul class="nav navbar-nav">
+        				    <!--ページタイトルの横にくるナビゲーションバーのタイトルの記述-->
+        					<li class="active"><a href="#">Home</a></li>
+        					           <!--#だけだと、ページの一番上に戻る。-->
+        					<li><a href="#list">List</a></li>
+        	           				<!--↑動物リストへのページ内リンク。#に続けてid名を記述-->
+        					<li><a href="">Table</a></li>
+        				</ul>
+        			</div>
+        		</div>
+        	</nav>
+    
+	<div class="container">
+		<div class="starter-template">
+			<h1>吾輩は猫である。</h1>
+			<p class="lead">名前はまだない。</p>
+			<img src="https://paiza-webapp.s3.amazonaws.com/files/learning/photo_cat_1024.jpg" class="img-responsive center-block">
+			<p>どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。
+			</p>
+		<!--Bootstrapを使ったリストの作成 class属性を、list-group-itemとする。-->
+			<h2 id="list">動物リスト</h2>
+		    <ul class="list-group">
+    	   	  <li class="list-group-item">ねこ</li>      
+		        <li class="list-group-item">ねこ</li>      
+		        <li class="list-group-item">ねこ</li>      
+		    </ul>
+		  
+			<a class="btn btn-primary" href="#">OK</a>
+		</div>
+		    
+		
+	</div>
+	<!-- /.container -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<button class="top-rt"><a href="index.html">トップへ戻る</a></button>
+</body>
+
+</html>
