@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Bootstrapの練習6</title>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <style>
+    body{
+      background-color: lightgray;
+       background-size: cover;}
+
+    h1{padding:80px}   
+      
+    .card-deck{
+        margin-left: 80px;
+        margin-right: 80px;
+      }
+
+    .top-rt{
+      margin-left: 80px;
+      margin-right: 80px;
+    }  
+    </style>     
+	</head>
+
+<body>
+  <h1>カード配置の練習</h1>
+  <div class="card-deck">
+    <div class="row p-2">  <!-- rowタグで囲む＝この部分を１行とする -->
+      <div class="col-sm-4 text-center"><!-- col-sm-4＝この部分を4グリッドの一列とする text-center=全て中央揃え-->
+        <div class="card-header">
+          カード１
+        </div>
+        <div class="card h-100">
+          <div class="card bg-primary">
+          <img class="card-img-top pt-5" src="ohinasama.gif" width="200" height="150">
+          <div class="card-body">
+            <h2 class="card-title">春</h2>
+            <p class="card-text">春の作品：ひなまつり
+            </p>
+            <!-- マージンは「m」・パディングは「p」
+            上（top）→ t
+            下（bottom）→ b
+            右（right）→ r
+            左（left）→ l
+            上下 → y
+            左右 → x 
+            Bootstrapでは、以下の0～5までの間で設定することができます。
+            ※1rem＝16px（デフォルト）
+          上に0.25remのマージン → mt-1
+           下に1remのパディング → pb-3
+          左右に3remのマージン → mx-5
+                  -->
+          </div></div>
+        </div>
+      </div>
+  
+      <div class="col-sm-4 text-center">
+        <div class="card-header">
+          カード２
+        </div>
+        <div class="card h-100">
+          <div class="card bg-primary">
+          <img class="card-img-top pt-5" src="suizokukan.png" width="200" height="300">
+          <div class="card-body">
+            <h2 class="card-title">夏</h2>
+            <p class="card-text">夏の作品：水族館</p>
+           
+          </div>
+        </div>
+        </div>
+      </div>
+  
+      <div class="col-sm-4 text-center">
+        <div class="card-header">
+          カード３
+        </div>
+        <div class="card h-100">
+          <div class="card bg-primary">
+          <img class="card-img-top pt-5" src="ochiba.png" width="240" height="150">
+          <div class="card-body">
+            <h2 class="card-title">秋</h2>
+            <p class="card-text">秋の作品：落ち葉</p>
+            
+          </div>
+        </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+</div>
+<button class="top-rt"><a href="index.html">トップへ戻る</a></button>
+	</body>
+	<footer class="footer"></footer>
+</html>
