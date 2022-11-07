@@ -1,0 +1,79 @@
+body{
+  font-size:14px;
+}
+/* ★★cssのスタイル指定の記号=セレクタ★★
+・カンマ(,)＝複数の要素に{}内のスタイルを適用
+・ドット(.)＝ドットの後に指定したclassに{}内のスタイルを適用
+・シャープ(#)＝シャープの後に指定したidに{}内のスタイルを適用
+・アスタリスク(*)＝全ての要素に{}内のスタイルを適用
+・>＝指定した要素の子要素にのみ{}内のスタイルを適用
+・＋＝指定した要素に隣接する要素にのみ{}内のスタイルを適用
+  （例えば、h3+p{}のとき、<h3>あ</h3><p>い</p><p>う</p>のうち、
+  あといにのみ適用）
+・要素名[属性名="x"]＝属性名がxである要素に{}内のスタイルを適用
+・要素名[属性名$="y"]＝属性名がyで"終わる"要素に{}内のスタイルを適用
+  ※$の他に、
+    ^(前方一致）～で始まる
+    *（部分一致）～が含まれる
+*/
+
+#open,#close{
+  cursor:pointer;
+  /* カーソルプロパティをポインタにする */
+  width:200px;
+  border:1px solid #ccc;
+  border-radius:4px;
+  text-align:center;
+  padding:12px 0;
+  margin:16px auto 0;
+  /* 上1余白16px、下のマージンなし、中央揃え */
+}
+
+#mask{
+  background: rgba(0,0,0,0.4);
+                /* ↑透明度の指定 */
+  position:fixed;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  /* ↑画面いっぱいに広げる＝余白なし*/
+  z-index:1;
+  /* 要素の重なり順の設定＝コードの書き順に関わらす、z-index:1,2,...の順で下から重ねられる*/
+  }
+
+  #modal {
+  background: #fff;
+  width: 300px;
+  padding: 20px;
+  border-radius: 4px;
+  position: absolute;
+/* 配置する位置＝絶対指定 */
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+/* ↑中央ぞろえになる */
+  transition:transform 0.4s;
+/* ↑モーダルが上から降りてくるアニメーションの設定 */
+/* transitionに対して、transformが変化するときには1.0秒かける */
+  z-index:2;
+}
+
+#modal > p {
+  /* modalの中のpに適用するスタイル */
+  margin: 0 0 20px;
+}
+/* ↑テキストの配置の調整 */
+
+#mask.hidden{
+  display:none;
+}
+/* #の後に指定したidのうち、.後に指定したクラスに
+{}内のスタイルを適用。display:none＝消す */
+
+#modal.hidden{
+  transform:translate(0,-500px);
+}
+/* openボタンを押すと、上から降りてくる＝押す前は上の方に配置しておく 
+    transform:translate(x座標,y座標（-が上方向）); */
