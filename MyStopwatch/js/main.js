@@ -71,7 +71,7 @@
     // start.disabled=false
     // stop.disabled=true;
     // reset.disabled=false;
-    start.classList.add('inactive');
+    start.classList.remove('inactive');
     stop.classList.add('inactive');
     reset.classList.remove('inactive');
    }
@@ -101,8 +101,8 @@
   //基準となる日時からの経過ミリ秒を使って計算するstartTime＝Date.now()関数
   //＝countUPの実行
 
-  stop.addEventListener('click',()=>{
-    if(start.classList.contains('inactive')===true){
+  stop.addEventListener('click',() => {
+    if(stop.classList.contains('inactive')===true){
       return;}
       setButtonStateStopped();
     //ストップボタンを押す＝stoppedの状態にする（この関数を動かす）
@@ -119,7 +119,7 @@
     });  
 
   reset.addEventListener('click',()=>{
-    if(start.classList.contains('inactive')===true){
+    if(reset.classList.contains('inactive')===true){
       return;}
       setButtonStateInitial();
         //リセットボタンを押す＝Initialの状態にする（この関数を動かす）
