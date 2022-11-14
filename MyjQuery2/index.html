@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery training2</title>
+  <style>
+    .red-text{
+      color:red;
+      font-weight:bold;
+     }
+
+     li{cursor:pointer;}
+     /* 入力して表示されたリストをｘ印で消せるようにする */
+
+     li:hover::after{
+      content:'[x]';
+      font-size:14px;
+      color:#aaa;
+      margin-left: 4px;
+      /* 文字を少し小さくして色はグレー、左側に余白
+      →クリックすると消える設定をjsでする。*/
+     }
+     /* 追加したリストの要素にマウスホバーすると、リスト直後にx印が出る 
+     ::afterは疑似要素、contentプロパティは'[]'内を表示する*/
+  </style>
+</head>
+<body>
+  <input type="text">
+  <!-- 入力フォームの挿入 -->
+
+  <button>Add</button>
+  <!-- 要素を追加するボタン=Addとする。このボタンを押すと、
+  リストに要素が追加されるようにする→jsへ -->
+  <ul>
+  </ul>
+  
+  <!-- <li>Item 0</li>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li> -->
+  
+  
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script> 
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
