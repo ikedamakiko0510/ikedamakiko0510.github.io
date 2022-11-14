@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Carousel</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<section class="carousel">
+  <!-- carouselセクションで区切る→cssで設定 -->
+  <div class="container">
+<ul>
+  <li><img src="img/pic1.png"></li>
+  <li><img src="img/pic2.png"></li>
+  <li><img src="img/pic3.png"></li>
+  <li><img src="img/pic4.png"></li>
+</ul>
+<!-- 画像を4つに増やすと、jsでボタンを生成しているので自動的にボタンが４つになる -->
+<!-- imgのリストを作る。imgフォルダ内のファイル名を指定。ulリストは
+先頭に●がつくのでcssでリセットする-->
+<button id="prev">&laquo;</button>
+<button id="next">&raquo;</button>
+<!-- 画像をスライドするためのボタンの設置
+戻るボタン＝idをprevにする。★矢印を表す＝文字実態参照＝&laquo
+進むボタン＝idをnextにする。★矢印を表す＝文字実態参照＝&raquo
+★文字実態参照：HTMLで特殊文字を表示させたいときに使われるものとのこと。 &laquo は「<<」と、 &raquo は「>>」lはleft,rはrightと表示される-->
+  </div>
+  <nav>
+    <!-- <button class="current"></button>
+    <button></button>
+    <button></button> -->
+    <!-- jsで操作するのでいったん消しておく -->
+  </nav>
+</section>
+
+<script src="js/main.js"></script>
+</body>
+</html>

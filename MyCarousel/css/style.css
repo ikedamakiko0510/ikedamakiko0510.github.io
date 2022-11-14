@@ -1,0 +1,122 @@
+.carousel{
+  width: 80%;
+  margin:16px auto;
+}
+
+.container{
+width: 100%;
+height: 220px;
+margin:16px auto;
+/* outline:8px solid red; */
+/* outline:=領域に対して赤い枠線をつける↑ */
+/* 画像表示の設定が完了したら不要なので枠線は削除 */
+overflow:hidden;
+/* あふれたb,cを隠す(下記参照） */
+position: relative;
+/* <!-- 絶対配置(absolute)というのは、パソコン画面左上を基点として、指定した座標に配置させることを意味します。相対配置(relative)というのは、通常配置される場所を基点として、配置する方法です。--> */
+
+}
+
+ul{
+  list-style:none ;
+  /* スタイルのリセット */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* containerの100%の高さ */
+  display:flex;
+  /* 画像３つを横並びにする→これだけだと、横並びにはなるが、それぞれが縮んでしまっている。（★flexアイテムはデフォルトでは等しく縮むようになっているため） ↓直すには、liの幅を、最低でも親要素であるulの幅100%になるようにmin-widthを指定する*/
+  transition:transform.3s;
+  /* ★transformの変化は、0.3秒かけるという指定 */
+}
+
+/* このままだと、領域からはみ出すのでサイズ調整をする*/
+
+li{
+  height: 100%;
+/* ulの100%の高さ */
+  min-width: 100%;
+  /* 最低でも親要素であるulの幅100%になる 
+  →領域内はaだけが入るようになるので、jsでスライドショーになる設定をする→あふれたb,cを隠す→containerにoverflow:hidden;をつける*/
+}
+
+li img{
+  /* width: 100%;
+  height: 100%;とすると、幅はcontainerと同じになるが、高さはそろわない。imgの親要素＝liとulの高さも指定しなければならない。 */
+  width: 100%;
+  height: 100%;
+/* 画像が縦につぶれ、横に広げると間延びしてしまうのを直す↓ */
+  object-fit: cover;
+/* 画像の縦横比を保ったまま、この領域全体を埋めるように直す↑ */
+}
+
+/* ボタンid(#id名で指定）にスタイルをつける */
+#prev,
+#next{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  /* top:100px;だと、ボタンがボックスの真ん中に来ないので、
+  いったんtop:50%にする（ボタンの上部の線が真ん中にくる）→
+  tranformで戻して中央にする。 */
+  border: none;
+  background: rgba(0,0,0,.8);
+  color: #fff;
+  font-size: 24px;
+  padding: 0 8px 4px;
+/* ボタンのスタイルをボーダーなし、背景半透明の黒、
+文字色白、サイズ、余白の設定 */
+  cursor: pointer;
+  /* マウスホバーしたときに、ポインタが指マークに変わってわかりやすくする */
+}
+
+#prev:hover,
+#next:hover{
+  opacity: .8;
+/* マウスホバーしたときの色の設定(少し薄くする） */
+}
+
+/*↓２つのボタンを、上から100pxの位置に配置 */
+#prev{
+  left:0;
+  /* 左端に寄せる */
+}
+#next{
+  right:0;
+  /* 右端に寄せる */
+}
+
+.hidden{
+  /* 最初の画面での戻るボタンと、最後の画面での進むボタンを無効にする＝隠す 設定→ボタンの状態を更新するための関数をjsで用意する*/
+  display: none;
+}
+
+nav{
+  margin-top: 16px;
+  text-align:center;
+/* 下の３つのボタンの位置設定 */
+}
+
+nav button+button{
+  margin-left: 8px;
+/* buttonに続くbuttonに対するスタイル 
+cssの＋記号＝指定した要素に"隣接する"要素に適用*/
+}
+
+nav button{
+/* ３つの丸ボタンのスタイル設定 */
+  border: none;
+  width: 16px;
+  height: 16px;
+  background: #ddd;
+  border-radius: 50%;
+  /* 丸くする */
+  cursor: pointer;
+ }
+
+ nav .current{
+  background:#999;
+  /* currentクラスをつけたボタン＝最初の状態のボタンは濃いめのグレーにする */
+ }
+
+
