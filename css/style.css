@@ -87,11 +87,6 @@ li img{
 /* マウスホバーしたときの色の設定(少し薄くする） */
 }
 
-/*↓２つのボタンを、上から100pxの位置に配置 */
-/* #prev{
-  left:0;
-  /* 左端に寄せる */
-} */
 #start{
   right:0;
   /* 右端に寄せる */
@@ -101,17 +96,11 @@ li img{
   /* 最初の画面での戻るボタンと、最後の画面での進むボタンを無効にする＝隠す 設定→ボタンの状態を更新するための関数をjsで用意する*/
   display: none;
 }
-/* 
-nav{
-  margin-top: 16px;
-  text-align:center;
-/* 下の３つのボタンの位置設定 */
-}
 
-nav button+button{
-  margin-left: 8px;
-/* buttonに続くbuttonに対するスタイル 
-cssの＋記号＝指定した要素に"隣接する"要素に適用*/
+
+nav {
+  margin-top:16px;
+  text-align:center;
 }
 
 nav button{
@@ -122,12 +111,12 @@ nav button{
   background: #ddd;
   border-radius: 50%;
   /* 丸くする */
-  cursor: pointer;
+  /* cursor: pointer; ポインタに変形はいったん消去*/
  }
 
- nav .current{
+ /* nav .current{
   background:#999;
   /* currentクラスをつけたボタン＝最初の状態のボタンは濃いめのグレーにする */
- } */
+ /* }  */ */
 
 
