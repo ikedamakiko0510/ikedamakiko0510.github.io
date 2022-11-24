@@ -114,9 +114,8 @@ nav button{
   /* cursor: pointer; ポインタに変形はいったん消去*/
  }
 
- /* nav .current{
+ nav .current{
   background:#999;
-  /* currentクラスをつけたボタン＝最初の状態のボタンは濃いめのグレーにする */
- /* }  */ */
+} 
 
 
