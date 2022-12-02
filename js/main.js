@@ -1,84 +1,62 @@
 'use strict';
-{ 
-  // const start=document.getElementById('start');
-  // startボタンの動きの設定開始
-  
+{   
   const ul=document.querySelector('ul');
   const slides=ul.children;
-  //すべてのスライド＝ulの子要素全ての設定開始
-  // const parent=document.getElementById('parent');
-  // const target1=document.getElementById('child1');
-  // const child1=document.createElement('li');
-  // child1.id="appendChild";
-
-  const nav=document.querySelector('nav');
   const button=document.querySelector('button');
-  const dots=[];
-  dots.push(button);
-  // dots[0].style.backgroundColor='#999';
+  // const current=document.getElemensByClassName('current');
 
+  // const btn1=document.getElementById('btn1');
+  // const btn2=document.getElementById('btn2');
+  // const btn3=document.getElementById('btn3');
+  // const btn4=document.getElementById('btn4');
+const dots=[];
+dots.push(button);
+ 
   let currentindex=0;
-
-   const parent=document.getElementById('parent');
-   const child1=document.getElementById('child1');
-   const child1_copy = child1.cloneNode(true);
-   const child2=document.getElementById('child2');
-   const child2_copy = child2.cloneNode(true); 
-   const child3=document.getElementById('child3');
-   const child3_copy = child3.cloneNode(true); 
-   const child4=document.getElementById('child4');
-   const child4_copy = child4.cloneNode(true); 
-
-   function resetSlides(){
-   parent.appendChild(child1_copy);
-    // child1.remove();
-    parent.appendChild(child2_copy);
-    // child2.remove();
-    parent.appendChild(child3_copy);
-    // child3.remove();
-    parent.appendChild(child4_copy);
-    // child4.remove();
-  }
-   
+  
   function moveSlides(){
     currentindex++;
     const slideWidth=slides[0].getBoundingClientRect().width;
     ul.style.transform=`translateX(${-1*slideWidth*currentindex}px)`;  
-    button.style.backgroundColor='#999';
-    resetSlides();
+    // button.style.backgroundColor='#999';
      } 
+    
+   function resetSlide(){  
+     const currentitem1=document.querySelectorAll('li')[0];
+     const copyitem1=currentitem1.cloneNode(true);
+     ul.appendChild(copyitem1);
+          
+     const currentitem2=document.querySelectorAll('li')[1];
+     const copyitem2=currentitem2.cloneNode(true);
+     ul.appendChild(copyitem2);
 
-  // function setupDots(){
-  //   for (let i=0;i<slides.length;i++){
-  //   const button=document.createElement('button');
-  //   dots.push(button);
-  //   document.querySelector('nav').appendChild(button);}
+     const currentitem3=document.querySelectorAll('li')[2];
+     const copyitem3=currentitem3.cloneNode(true);
+     ul.appendChild(copyitem3);
+     
+     const currentitem4=document.querySelectorAll('li')[3];
+     const copyitem4=currentitem4.cloneNode(true);
+     ul.appendChild(copyitem4);
+ }
 
-  // dots[0].classList.add('current');
-  
-  // function updateDots(){
-  //   dots.forEach(dot=>{dot.classList.remove('current');});
-  //   dots[currentindex].classList.add('current');
-  // }
-  
+ dots[0].classList.add('current');
+ function updatedots(){
+ dots.forEach(dot => {
+  dot.classList.remove('current');
+    });
+   dots[currentindex].classList.add('current');  
+  }
+
+
     let timer;
      
      function startSlideshow(){
       timer=setInterval(()=>{moveSlides();
+        resetSlide();updatedots();
           },3000); } 
-
-  // if (currentindex===3){clearInterval(timer);いらない？
     
        startSlideshow();  
       
-      //  setupDots();
-      //  updateDots();
-   
-// start.addEventListener('click',()=>{
-//   currentindex=-1;
-//   startSlideshow();
-// });
-
 // window.addEventListener('resize',()=>{
 // moveSlides();
 // });
