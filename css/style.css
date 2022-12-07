@@ -102,6 +102,13 @@ nav {
   margin-top:16px;
   text-align:center;
 }
+/* ボタンを中央ぞろえ、ボタンの上に余白を作る */
+
+nav button + button {
+  margin-left:8px;
+}
+/* jsで生成したボタンには改行が反映されないので
+ボタンとボタンの間に余白を作る */
 
 nav button{
 /* ３つの丸ボタンのスタイル設定 */
