@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+main{
+  width:380px;
+  margin:24px auto 0;
+  box-shadow:0 0 8px #999;
+  border-radius: 8px;
+  padding:16px;
+}
+
+p{margin:0; 
+  /* スタイリングしやすいようにいったんリセット */
+ border:1px solid #aaa;
+ border-radius: 4px;
+ font-family: "Courier New";
+font-size:24px;
+text-align:center;
+padding:12px 0;
+}
+
+button{
+all: unset;
+/* スタイリングをすべてリセット} */
+  width: 100%;
+  background: #08c;
+  border-radius: 8px;
+  /* 青い角丸のボックス */
+  color: #fff;
+  /* 白い文字 */
+  text-align: center;
+  padding: 12px 0;
+  margin-top: 16px;
+  /* 文字中央ぞろえ、余白設定 
+  margint-topで上のボタンとの間隔をあける*/
+  cursor: pointer;
+  /* カーソルをあてるとポインタになる */
+
+}
+
+button:hover{
+/* ホバー疑似クラス（ホバーしたときの設定) */
+opacity: .6;
+}
+
+button:active{
+/* アクティブ疑似クラス（ボタンがクリックされたときの設定) */
+opacity:.4;
+}
+
+fieldset{
+  border:1px dashed #aaa;
+  /* 回りをグレーの点線で囲む */
+  border-radius: 8px;
+  padding:16px;
+  margin-top:16px;
+  display:flex;
+  justify-content: space-between;
+  /* フレックスボックスを使用 */
+}
+
+legend{
+  padding:0 8px;
+/* 内側の上下は0,左右は8px */
+}
+
+#password-length {
+  width: 24px;
+  display: inline-block;
+  text-align: center;
+
+/* パスワードの長さの数値が2桁になってもがたつかないようにする */
+}
