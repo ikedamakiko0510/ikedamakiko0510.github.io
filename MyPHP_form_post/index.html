@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <form action="post.php" method="post">
+    <p>お名前：<input type="text" name="name"></p>
+    <p>性別：
+      <input type="radio" name="gender" value="男性">男性
+      <input type="radio" name="gender" value="女性">女性
+    </p>
+    <p>血液型：
+      <select name="blood">
+        <option value="AB">AB</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="O">O</option>
+      </select>
+    </p>
+    <p>ご意見：</p>
+    <p><textarea name="opinion" cols="50" rows="5"></textarea></p>
+    <p><input type="submit" name="submitBtn" value="送信"></p>
+  </form>
+</body>
+</html>
