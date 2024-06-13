@@ -75,12 +75,32 @@
 </div>
 
 <!-- 更新日時を入れる -->
-<p>
-  更新日: <time datetime="2024-06-13">2024年6月13日</time>
-  </p>
+
+  <!-- 更新日: <time datetime="2024-06-13">2024年6月13日</time> -->
+  <p>Last updated on: <time id="modified_date"></time></p>
+  <script>
+    const last = new Date(document.lastModified);
+    const year = last.getFullYear();
+    const month = last.getMonth() + 1;
+    const date = last.getDate();
+    let fixedMonth = month;
+    let fixedDate = date;
+    if (month < 10) {
+    fixedMonth = "0" + month;
+    }
+    if (date < 10) {
+    fixedDate = "0" + date;
+    }
+    const viewDateText = year + "年" + month + "月" + date + "日";
+    const datetimeText = year + "-" + fixedMonth + "-" + fixedDate;
+    const target = document.getElementById('modified_date');
+    target.textContent = viewDateText;
+    target.setAttribute("datetime", datetimeText);
+    </script>
 
 <div class="container py-4" id="skill">
-  <h2>Travel</h2>
+
+ <h2>Travel</h2>
   <p>旅行</p>
 </div>  
   
