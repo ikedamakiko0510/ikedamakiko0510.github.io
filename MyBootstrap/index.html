@@ -22,16 +22,19 @@
 
   <!-- ナビゲーションメニュー -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <!-- <a class="navbar-brand text-dark" href="#">2024</a> -->
+    <a class="navbar-brand text-dark" href="#">2024</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand text-dark" href="#">2024</a>
     
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ">
             <!-- <a class="nav-link text-dark" href="#!">Jan-May <span class="sr-only">(current)</span></a> -->
-            <a class="nav-link text-dark" href="#!">Jan-May</a>
+            <!-- nav-linkを記述することでカーソルを上に載せた際に文字色が変化する -->
+            <!-- 今開かれているページには、aria-current="page" を追加する-->
+             
+            <!-- <a class="nav-link text-dark" href="#!">Jan-May</a> ←ちょっと太くする場合。text-dark-->
+            <a class="nav-link text-primary" href="#!">Jan-May</a>
             <a class="nav-link text-dark" href="#!">June-Aug</a> 
             <a class="nav-link text-dark" href="#!">Sep-Oct</a>
             <a class="nav-link text-dark" href="#!">Nov-Dec</a>
@@ -70,6 +73,9 @@
       <span class="sr-only">Next</span>
     </a>
 </div>
+
+<!-- 更新日時を入れる -->
+
 
 <div class="container py-4" id="skill">
   <h2>Travel</h2>
